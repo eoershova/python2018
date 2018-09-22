@@ -10,4 +10,4 @@ homeworks of hse ling student ershova from бкл171
 
 |№|Тема|ссылка|
 |-------|----|--------|
-|1|Игра Виселица|[код](https://github.com/eoershova/python2018/tree/master/hw)|
+|1|Игра Виселица|[код](https://github.com/eoershova/python2018/blob/master/hw/HW1.ipynb)|
