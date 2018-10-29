@@ -12,4 +12,4 @@ homeworks of hse ling student ershova from бкл171
 |-------|----|--------|
 |1|Игра Виселица|[код](https://github.com/eoershova/python2018/blob/master/hw/HW1.ipynb)|
 |2| Домашнее задание №2|[код](https://github.com/eoershova/python2018/blob/master/hw/hw.ipynb)|
-|3| Газетный корпус|[код]https://github.com/eoershova/python2018/blob/master/hw/project/hw3.ipynb|
+|3| Газетный корпус|[код](https://github.com/eoershova/python2018/blob/master/hw/project/hw3.ipynb)|
