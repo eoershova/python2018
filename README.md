@@ -13,5 +13,5 @@ homeworks of hse ling student ershova from бкл171
 |1|Игра Виселица|[код](https://github.com/eoershova/python2018/blob/master/hw/HW1.ipynb)|
 |2| Домашнее задание №2|[код](https://github.com/eoershova/python2018/blob/master/hw/hw.ipynb)|
 |3| Газетный корпус|[код](https://github.com/eoershova/python2018/blob/master/hw/project/hw3.ipynb)|
-|4| Дз №4|его нет :(|
+|4| Дз №4|[его нет :(] (http://webcomicname.com/image/170084415789)|
 |5| Поисковик для корпуса|[его нет](http://webcomicname.com/image/172483437879) :( потому что я не успевала его сделать, но задание интересное, поэтому я к нему вернусь в любом случае :)|
