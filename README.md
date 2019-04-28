@@ -15,3 +15,4 @@ homeworks of hse ling student ershova from бкл171
 |3| Газетный корпус|[код](https://github.com/eoershova/python2018/blob/master/hw/project/hw3.ipynb)|
 |4| Дз №4|[его нет :(](http://webcomicname.com/image/170084415789)|
 |5| Поисковик для корпуса|[его нет](http://webcomicname.com/image/172483437879) :( потому что я не успевала его сделать, но задание интересное, поэтому я к нему вернусь в любом случае :)|
+|6| VK API HW |[папка с кодом и ссылкой на корпус в ридми](https://github.com/eoershova/python2018/tree/master/hw/hw%20vk%20api) |
