@@ -9,13 +9,14 @@ all_forms = collections.defaultdict(list)
 case_prepositions = collections.defaultdict(list)
 
 
-# classifies words according to their grammar tag prepositions are stored separately
+# classifies words according to their grammar tag prepositions
+# are stored separately
 # for their grammar tag can be determined by the following noun
 def word_finder():
     for book in books:
         with open(book, 'r', encoding='utf-8') as file:
             text = file.read()
-            clean_text = re.sub('[^А-ЯЁа-яё\d-]', ' ', text)
+            clean_text = re.sub(r'[^А-ЯЁа-яё\d-]', ' ', text)
             words = clean_text.split()
             prepositions = []
             for word in words:
@@ -26,12 +27,13 @@ def word_finder():
                     continue
                 else:
                     all_forms[word.tag].append(original_word)
-
             prepositions = set(prepositions)
             preps_case = []
             for preposition in prepositions:
-                preposition = preposition.lower()
-                following_words = re.findall('\s' + preposition + '\s[А-ЯЁёа-я]+', clean_text.lower())
+                prep = preposition.lower()
+                clean_text = clean_text.lower()
+                fw = re.compile(r'\s' + prep + r'\s[А-ЯЁёа-я]+')
+                following_words = re.findall(fw, clean_text)
                 case_count = collections.Counter()
                 if len(following_words) > 1:
                     for option in following_words:
@@ -51,7 +53,7 @@ def word_finder():
 
 def user_listener(user_answer):
     sentence = collections.OrderedDict()
-    user_answer = re.sub('[^А-ЯЁа-яё\d]', ' ', user_answer)
+    user_answer = re.sub(r'[^А-ЯЁа-яё\d]', ' ', user_answer)
     n = 0
     for word in user_answer.split():
         n += 1
@@ -81,8 +83,7 @@ def answer_maker(sentence):
                 if index == 1:
                     substitute = substitute.capitalize()
                 answer = answer + ' ' + substitute
-            except:
-                KeyError
+            except KeyError:
                 substitute = 'Чебаркуль'
                 answer = answer + ' ' + substitute
         else:
@@ -96,17 +97,11 @@ def answer_maker(sentence):
                 if index == 1:
                     substitute = substitute.capitalize()
                 answer = answer + ' ' + substitute
-            except:
-                KeyError
+            except KeyError:
                 substitute = 'Чебаркуль'
                 answer = answer + ' ' + substitute
 
     return answer
-
-
-
-
-
 
 
 def main():
@@ -117,4 +112,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
