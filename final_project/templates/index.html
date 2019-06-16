@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>haha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 col-sm-offset-1">
+          <h1>Корпус Анекдотов Категории Б</h1>
+          <br>
+          <form role="form" method="POST" action="/">
+            <div class="form-group">
+              <input type="text" name="url" class="form-control" id="url-box" placeholder="Введите персонажа" style="max-width: 300px;">
+            </div>
+            <button type="submit" class="btn btn-default">Жмак!</button>
+          </form>
+          <br>
+          <h2>Как работает?</h2>
+          <h4>1) С помощью <b>VK API </b> я собрала корпус анекдотов с <p><a href="https://vk.com/baneksbest">культовой страницы</a></p></h4>
+          <h4>2) благодаря <b>pymorphy2 </b>  лемматизировала тексты  </h4>
+          <h4>3) слегка вопреки <b>SQLite</b> сделала из них БД </h4>
+          <h4>4) и наконец засчет <b>FLask</b> и <b>Heroku</b> создала эту страничку </h4>
+          <br>
+          <h4>* как в рассказе Пелевина "День Бульдозериста" мат частично заменен на МАЙ </h4>
+          <br>
+          <h4>5) спасибо за  этот курс питона, он придал мне надежды</h4>
+          {% for error in errors %}
+            <h4>{{ error }}</h4>
+          {% endfor %}
+          <br>
+        </div>
+        <div class="col-sm-5 col-sm-offset-1">
+          {% if results %}
+            <h2>Анекдот</h2>
+            <br>
+            <br>
+            <br>
+            <div id="results">
+              <table class="table table-striped" style="max-width: 300px;">
+                <thead>
+                  <tr>
+                    <th>Наше Время</th>
+                    <th>Герой</th>
+                  </tr>
+                </thead>
+                {% for result in results%}
+                  <tr>
+                    <td>{{ result }}</td>
+                    <td>{{ results[result] }}</td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+          {% endif %}
+        </div>
+        <br>
+      </div>
+      <img src="https://thequestion.s3.eu-central-1.amazonaws.com/567/276536-04429dbb.jpeg" alt="Smiley face" align="middle" style="width:600px;height:500px;">
+      <h4>* принимаю звонки от ассоцации великих программистов-фронтендеров, которая хочет принять меня в свои ряды </h4>
+      <br>
+    </div>
+    <br>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
